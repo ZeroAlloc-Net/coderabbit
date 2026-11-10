@@ -6,6 +6,8 @@ reviews:
   high_level_summary: true
   poem: false
   review_status: true
+  # Approve once all CodeRabbit comments are resolved, request changes while open.
+  request_changes_workflow: true
   auto_review:
     enabled: true
     drafts: false
