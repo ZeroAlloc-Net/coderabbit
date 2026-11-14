@@ -5,8 +5,9 @@ language: en-US
 # and no silent reversal of an earlier recommendation. Max 250 characters.
 tone_instructions: >-
   Name every location of a pattern in one comment. In follow-up reviews, raise
-  only new issues in changed lines. If you reverse an earlier recommendation,
-  say so and why. Be brief and cite sources.
+  new issues in changed lines or defects a fix causes elsewhere; skip
+  duplicates. If you reverse an earlier recommendation, say so and why. Be
+  brief and cite sources.
 reviews:
   profile: chill
   high_level_summary: true
