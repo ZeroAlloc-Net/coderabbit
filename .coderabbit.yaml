@@ -8,11 +8,21 @@ reviews:
   review_status: true
   # Approve once all CodeRabbit comments are resolved, request changes while open.
   request_changes_workflow: true
+  # Session handoff files (docs/planning/STATE.md) change on every chore(state)
+  # PR and hold no code; reviewing them only adds rounds.
+  path_filters:
+    - "!**/STATE.md"
   auto_review:
     enabled: true
     drafts: false
+    # Stacked PRs target a feature branch; review those too, not only the
+    # default branch.
+    base_branches:
+      - ".*"
     ignore_usernames:
       - renovate[bot]
       - dependabot[bot]
       - github-actions[bot]
       - release-please[bot]
+      # Release PRs come from this app, not from release-please[bot].
+      - marcel-release-bot[bot]
